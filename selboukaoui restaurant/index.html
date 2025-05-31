@@ -6,6 +6,8 @@
     <title>Se Restaurant</title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="script.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="shortcut icon" href="img/selboukaoui logo.png" type="image/x-icon">
@@ -13,29 +15,18 @@
 </head>
 <body>
     <!-- Hero page start -->
-    <header>
+    <header id="Home">
         <div class="navbar">
             <img src="img/selboukaoui logo.png" alt="Our logo">
             <nav>
-                <ul class="active"> 
+                <ul id="active">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div id="deactive">
-                    <i class="fa-solid fa-bars" id="chiqlwa"></i>
-                    <div class="small-menu">
-                        <ul id="tst"> 
-                            <li><a href="#Home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#menu">Menu</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <button onclick="openSideBar()" id="Sidebar"><i class="fa-solid fa-bars" id="Sidebar"></i></button>
             </nav>
         </div>
         <div class="content">
@@ -61,7 +52,6 @@
                             veniam vitae aut tempore suscipit error, exercitationem illum dicta ipsum qui 
                             quas inventore molestiae numquam quo, natus eveniet deleniti incidunt!
                         </p>
-                    
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto libero, 
                             veniam vitae aut tempore suscipit error, exercitationem illum dicta ipsum qui 

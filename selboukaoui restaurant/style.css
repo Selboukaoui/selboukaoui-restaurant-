@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red;  */
+  /* outline: 1px solid red; */
 }
 
 html{
@@ -13,7 +13,6 @@ html{
 
 body{
   font-family: "Quicksand", sans-serif;
-
 }
 
 /* Utility Classes Start */
@@ -43,7 +42,6 @@ body{
 
 .container{
   max-width: 1100px;
-  /* max-width: 900px; */
 }
 
 .btn-sec{
@@ -65,39 +63,6 @@ header{
   background: url(img/hero_backg.jpg) center center/cover no-repeat;
   position: relative;
 }
-
-#deactive{
-  visibility: hidden;
-  color: white;
-  position: absolute;
-  top: 30px;
-  right: 0px;
-  font-size: 40px;
-}
-
-#deactive .small-menu{
-  /* width: 100%;
-  height: 100%; */
-  /* background: #9a9a9a; */
-  /* position: relative; */
-
-}
-#deactive .small-menu ul {
-  font-size: 20px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  visibility: hidden;
-  /* display: flex;
-  flex-direction: column; */
-}
-/* #deactive i:hover{
-  font-size: 20px;
-} */
-
-/* #chiqlwa:hover ~ #tst {
-    visibility: visible;
-} */
 
 .navbar{               
   display: flex;
@@ -161,19 +126,37 @@ header::before{
   background: rgb(0, 0, 0, 0.5);
 }
 
-
 header *{
   z-index: 10;
 }
 
+nav i{
+  opacity: 1 ;
+  color: white;
+  font-size: 30px;
+}
+nav button{
+  background-color: transparent;
+  border: none;
+  background-color: red;
+}
+
+#Sidebar{
+  visibility: hidden;
+}
+
+#active{
+  visibility: visible;
+}
+
+
+@media screen and (max-width: 800px) {
+  .content h1 {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 680px) {
-  #deactive{
-    visibility: visible;
-    opacity:1;
-  }
-  .navbar nav  {
-    visibility: hidden;
-  }
   .content h1{
     font-size: 30px;
     width: 90%;
@@ -181,25 +164,44 @@ header *{
   }
   .navbar img{
     width: 120px;
-
     margin-left: 0%;
   }
-  .navbar nav ul {
-    margin-right: 0px;
-    margin-right: 0px;
-  }
+
   .navbar ul li a{
     padding: 0px;
   }
-}
 
-@media screen and (max-width: 800px) {
-  .content h1 {
-    font-size: 30px;
+  #active {
+    margin-right: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    gap: 20px;
+    background: none;
+    visibility: hidden;
   }
   .navbar ul li a{
-    /* padding: 10px; */
+    font-size: 30px;
   }
+  .navbar i,
+  .navbar input{
+    visibility: visible;
+    position:absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 30px;
+  }
+  .navbar #Sidebar{
+    visibility: visible;
+  }
+
 }
 
 /* Header end */
@@ -594,9 +596,6 @@ header *{
 
 #contact{
   background-color: #f4f4f4;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 #contact .container{
@@ -632,16 +631,34 @@ header *{
   margin-right: 10px;
 }
 
+.social-media{
+  height: 150px;
+}
+
 #contact .social-media a{
-  margin: 15px 10px 0 0;
+  height: 100px;
+  width: 100px;
+  margin: 15px 15px 0 0;
   text-decoration: none;
+  color: #e4b25b;
 }
 
 #contact .social-media a i{
   font-size: 25px;
+  transition: 0.3s;
+
 }
 #contact .social-media a i:hover{
   color: #e4b95b;
+  font-size: 35px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#contact .social-media a:hover{
+
+  height: 160px;
+  width: 160px;
+  text-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #contact .send-msg input{
