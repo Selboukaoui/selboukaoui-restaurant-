@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
 }
 
 html{
@@ -210,7 +209,7 @@ nav button{
 /* About Start */
 
 #about{
-  height: 70vh;
+  height: 80vh; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,17 +288,22 @@ nav button{
     width: 300px;
   }
 }
-
+@media only screen and (max-height: 1015px) {
+  #about{
+    height: 150vh;
+  }
+}
 
 /* About End   */
 
 /* special offers Start */
 
 #offer{
-  height: 60vh;
+  height: 80vh;
   background: url(img/offer-background.jpg) center center/cover fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #offer .container{
@@ -392,12 +396,12 @@ nav button{
     margin-bottom: 3rem;
   }
 }
-@media only screen and (max-width: 375px) {
+
+@media only screen and (max-height: 665px) {
   #offer{
-    height: 180vh;
+    height: 150vh;
   }
 }
-
 
 /* special offers End   */
 
